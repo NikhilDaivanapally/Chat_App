@@ -9,7 +9,7 @@ const app = express();
 app.use(
   cors({
     // origin: "*",
-    origin: ["http://localhost:5173", "http://100.104.156.141:5173"],
+    origin: ["https://chat-app-fawn-six.vercel.app"],
     credentials: true,
   })
 );
