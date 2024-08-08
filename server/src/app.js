@@ -5,14 +5,13 @@ import authRoute from "./routes/auth.route.js";
 import userRoute from "./routes/user.route.js";
 
 const app = express();
-
 app.use(
   cors({
-    // origin: "*",
-    origin: ["https://chat-app-fawn-six.vercel.app"],
+    origin: "https://chat-app-fawn-six.vercel.app",
     credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
