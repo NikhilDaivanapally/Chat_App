@@ -4,7 +4,7 @@ let socket;
 
 const connectSocket = (auth_id) => {
   return new Promise((resolve, reject) => {
-    socket = io("http://localhost:8000", {
+    socket = io("https://chatapp-1ghd.onrender.com", {
       query: { auth_id },
     });
 

@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // import useQuery from "../../hooks/useQuery.js";
 export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8000",
+    baseUrl: "https://chatapp-1ghd.onrender.com",
     credentials: "include",
   }),
   endpoints: (builder) => ({
