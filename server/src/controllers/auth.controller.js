@@ -246,11 +246,15 @@ const loginUser = async (req, res, next) => {
   const accessoptions = {
     httpOnly: true,
     maxAge: 1000 * 60 * 60 * 24,
+    secure: true,
+    sameSite: "None",
   };
 
   const refreshoptions = {
     httpOnly: true,
     maxAge: 1000 * 60 * 60 * 24 * 10,
+    secure: true,
+    sameSite: "None",
   };
 
   return res
