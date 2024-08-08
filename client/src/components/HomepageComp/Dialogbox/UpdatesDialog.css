@@ -1,0 +1,173 @@
+.Dialog_box {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+.Dialog_box_content {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  color: var(--color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .Dialog_box_content {
+    width: 350px;
+    font-size: 0.75rem;
+    height: 450px;
+  }
+  .user {
+    font-size: 0.8rem;
+  }
+}
+
+.close_Dialog {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 3%;
+  right: 4%;
+  /* top: 16%; */
+  /* right: 34.5%; */
+  padding: 0.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close_Dialog:hover {
+  background-color: #eaeaff;
+}
+
+.content_tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  /* position: relative; */
+  /* background-color: aqua; */
+}
+.content_tabs li {
+  margin: auto;
+  /* background-color: antiquewhite; */
+  padding-block: 0.3rem;
+  cursor: pointer;
+  user-select: none;
+}
+.content_tabs p:active {
+  border-bottom: 3.4px solid #6366f1;
+}
+ul .bar {
+  position: absolute;
+  display: none;
+  height: 2.5px;
+  border-radius: 3px;
+  background-color: #6366f1;
+  transition: all 0.2s ease;
+  z-index: 4;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+.content .users_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.no_friend_req,
+.no_friends,
+.no_users {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.user {
+  width: 70%;
+  display: flex;
+  gap: 1rem;
+  padding: 0.6rem;
+  align-items: center;
+  /* background-color: #6366f1; */
+  border-radius: 10px;
+  /* border: 1px solid grey; */
+}
+.user .img_contatiner {
+  width: 40px;
+  height: 40px;
+  /* background-color: black; */
+  border-radius: 50%;
+  position: relative;
+}
+.online_offline {
+  width: 7px;
+  height: 7px;
+  background-color: rgb(11, 164, 11);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+}
+.user .msg,
+.user .remove {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.user .controls {
+  margin-left: auto;
+  display: flex;
+  gap: 0.9rem;
+}
+.user .img_contatiner .avatar {
+  width: 100%;
+  height: 100%;
+}
+.user .img_contatiner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.user .info p:nth-child(1) {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+.user .info p:nth-child(2) {
+  font-size: 0.8rem;
+  color: grey;
+}
+.user button {
+  background-color: transparent;
+  height: fit-content;
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 30px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #6366f1;
+  text-decoration: underline;
+}
+.user button:hover {
+  background-color: #6366f1;
+  color: white;
+}
+.user .AddTo_friend:active {
+  scale: 0.95;
+}

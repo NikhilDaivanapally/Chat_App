@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-color: white;
+  --color: black;
+  --primary-hover: #eaeaff;
+  --box-shadow-color: grey;
+  --msg-start-color: white;
+  --Timeline-color: rgb(240, 240, 240);
+  --selected-color: #696bf1;
+  
+}
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --color: white;
+  --msgColor: #292b30;
+  --primary-hover: #3c4458;
+  --box-shadow-color: #3c4458;
+  --msg-start-color: #373d49;
+  --Timeline-color: #3c4458;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+}

@@ -1,0 +1,298 @@
+.Signup,
+.Signin,
+.forgotpassword,
+.resetPassword {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #d5d6f8; */
+}
+.Signup_Container,
+.Signin_Container,
+.forgotpassword_Container,
+.resetPassword_Container {
+  width: 30%;
+  min-width: 350px;
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
+  /* box-shadow: 2px 2px 5px rgb(210, 208, 208), -2px -2px 5px rgb(210, 208, 208); */
+  border-radius: 0.5rem;
+}
+
+.forgotpassword_Container .info ,.resetPassword_Container .info{
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.Signup_Container .redirect_login,
+.Signin_Container .redirect_login {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+.Signup_Container .redirect_login .login,
+.Signin_Container .redirect_login .signup {
+  padding-left: 0.5rem;
+  color: #6366f1;
+}
+
+.Signup_title,
+.Signin_title,
+.forgotpassword_title,
+.resetPassword_title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.Signup_form,
+.Signin_form,
+.forgotpassword_form ,
+.resetPassword_form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* file css */
+.Signup_form .inpt_file .choose .select {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.Signup_form .inpt_file .choose {
+  display: flex;
+  justify-content: space-between;
+}
+.Signup_form .inpt_file .choose .previewer {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #848484;
+  border-radius: 50%;
+  margin-right: 20px;
+  overflow: hidden;
+}
+.Signup_form .inpt_file .choose .previewer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Signup_form .inpt_file .choose .select:hover {
+  color: #6366f1;
+}
+.inpt_tag {
+  width: 100%;
+  position: relative;
+}
+.inpt_tag .input_name {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: white;
+  color: grey;
+  pointer-events: none;
+  padding-inline: 0.2rem;
+}
+
+.inpt_tag .showpassword_toggle {
+  position: absolute;
+  right: 0.3rem;
+  top: 50%;
+  transform: translateY(-40%);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.inpt_tag .showpassword_toggle .showicon {
+  color: grey;
+}
+.inpt_tag .lift {
+  scale: 0.9;
+  top: 0%;
+}
+.inpt_tag .inpt {
+  width: 100%;
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.2rem;
+  border: none;
+  border: 1.2px solid #dcdfe4;
+  outline: 1.2px solid white;
+  transition: all 0.5s ease;
+  font-size: 0.95rem;
+}
+.inpt_tag .inptpass {
+  padding-right: 2rem;
+}
+.inpt_tag .txt {
+  border-radius: 0.5rem;
+  width: 100%;
+  resize: vertical;
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  border: 1.2px solid #dcdfe4;
+  outline: 1.2px solid white;
+  transition: all 0.5s ease;
+}
+.inpt_tag .inpt:focus {
+  border-color: #6366f1;
+  outline-color: #6366f1;
+}
+.inpt_tag .txt:focus {
+  border-color: #6366f1;
+  outline-color: #6366f1;
+}
+
+/* Gender  */
+.Signup_form .Gender_container label {
+  margin-right: 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.Signup_form .Gender_container label:hover {
+  color: #6366f1;
+}
+
+.Signup_form .Gender_container label input {
+  cursor: pointer;
+}
+
+/* btn */
+.Signup_btn,
+.Signin_btn,
+.forgotpassword_btn ,
+.resetPassword_btn{
+  width: 100%;
+  border: none;
+  background-color: #6366f1;
+  color: white;
+  height: 2.5rem;
+  /* padding: 0.335rem 0.5rem; */
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: scale 0.3s ease-in;
+}
+.Signin_btn:hover,
+.Signup_btn:hover,
+.forgotpassword_btn:hover,
+.resetPassword_btn:hover {
+  opacity: 0.9;
+}
+.Signin_btn:active,
+.Signup_btn:active,
+.forgotpassword_btn:active ,
+.resetPassword_btn:active{
+  scale: 0.95;
+}
+
+/* forgot password */
+.Signin_form .forgot_password {
+  margin-top: -1rem;
+  font-size: 0.8rem;
+  margin-left: auto;
+  color: black;
+}
+.Signin_form .forgot_password:hover {
+  color: #6366f1;
+}
+
+/* verify_Container */
+
+.verify_Container {
+  width: 23%;
+  min-width: 310px;
+  /* min-height: 300px; */
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgb(210, 208, 208), -2px -2px 5px rgb(210, 208, 208);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.verify_Container .verify_info {
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.verify_Container .verify_info p:nth-child(1) {
+  color: grey;
+}
+
+.verify_Container .verify_info p:nth-child(2) {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: black;
+}
+.verify_Container .otp_container .otp_box {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  font-size: 20px;
+  border: none;
+  border: 2px solid grey;
+
+  border-radius: 5px;
+  text-align: center;
+}
+.verify_Container .otp_container .otp_box:focus {
+  outline-color: #6366f1;
+}
+
+.otp_form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.loader {
+  width: 3.25em;
+  transform-origin: center;
+  /* animation: rotate4 2s linear infinite; */
+  scale: 0.8;
+}
+
+.spin {
+  fill: none;
+  stroke: white;
+  stroke-width: 3;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
