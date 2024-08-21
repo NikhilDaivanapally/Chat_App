@@ -42,7 +42,7 @@
 .Close_Sidebar_Conatiner {
   font-size: 1.2rem;
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -52,12 +52,9 @@
   border-radius: 50%;
   cursor: pointer;
 }
-/* .Close_Sidebar:hover {
-  background-color: rgb(228, 228, 228);
-} */
+
 .Contact_info {
   flex: 1;
-  /* background-color: lightcoral; */
 }
 
 .Contact_details {
@@ -66,7 +63,6 @@
 }
 
 .members_in_group {
-  /* border-bottom: 1px solid grey; */
   padding: 1rem;
 }
 .member_Cont {
@@ -180,19 +176,16 @@
 
 .Media .bottom_section {
   width: 100%;
-  /* height: 90px; */
   padding: 0.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  /* background-color: white; */
 }
 .Media .bottom_section img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   cursor: pointer;
-  /* background-color: black; */
 }
 .common_in {
   padding-block: 0.5rem;

@@ -5,6 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { toggleSideBar, updateSidebarType } from "../../store/slices/appSlice";
 import { setfullImagePreview } from "../../store/slices/conversation";
+import { GrGroup } from "react-icons/gr";
 const Contact = () => {
   const auth = JSON.parse(localStorage.getItem("auth_id"));
   const dispatch = useDispatch();
@@ -43,15 +44,12 @@ const Contact = () => {
       <div className="Contact_info">
         <div className="Contact_details">
           <div className="profile_name">
-            <img
-              className="profile_img"
-              src={
-                chat_type == "individual"
-                  ? current_direct_conversation?.avatar
-                  : current_group_conversation?.img
-              }
-              alt="img"
-            />
+            {chat_type === "individual" &&
+            <img   className="profile_img" src={current_direct_conversation?.avatar} />
+          }
+          {chat_type === "group" && ( current_group_conversation?.img ? 
+            <img className="profile_img" src={current_group_conversation?.img} /> : <GrGroup className="no_groupimg"/>
+          )}
 
             <span>
               {chat_type == "individual"

@@ -1,7 +1,6 @@
 .Selected_Conversation {
   width: 100%;
   height: 100%;
-  /* flex: 1; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -51,7 +50,11 @@
   height: 40px;
   border-radius: 50%;
   position: relative;
-  background-color: black;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .profile_container .profile {
@@ -59,6 +62,10 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+}
+.profile_container .no_groupimg {
+  font-size: 1.5rem;
+  color: var(--color);
 }
 .profile_container .online_offline {
   width: 7px;
@@ -87,29 +94,8 @@
   font-size: 0.85rem;
   display: flex;
   gap: 0.2rem;
-  /* background-color: red; */
 }
-/* .Selected_Conversation .header .media_controls {
-  margin-left: auto;
-  width: 18rem;
-}
-.Selected_Conversation .header .media_controls ul {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  list-style-type: none;
-  height: 100%;
-  width: 100%;
-}
-.Selected_Conversation .header .media_controls ul li {
-  cursor: pointer;
-  padding: 0.5rem;
-  font-size: 1.4rem;
-  border-radius: 10px;
-} */
-/* .Selected_Conversation .header .media_controls ul li:hover {
-  background-color: var(--primary-hover);
-} */
+
 /* Conversation header  ends*/
 
 /* Conversation body  starts*/
@@ -125,25 +111,6 @@
   overflow: auto;
   font-size: 0.85rem;
 }
-/* @media (max-width: 767px) {
-  .Selected_Conversation {
-    height: 100vh;
-  }
-  .Selected_Conversation .header,
-  .Selected_Conversation .footer {
-    padding: 1rem;
-  }
-  .Selected_Conversation .body {
-    flex: 1;
-    padding: 1rem;
-  }
-  .disableChat_display {
-    display: none;
-  }
-  .header .go_back {
-    display: block;
-  }
-} */
 
 .Selected_Conversation .body .datewise_msgs {
   display: flex;
@@ -290,16 +257,8 @@
 .Doc_msg,
 .Link_msg {
   position: relative;
-  /* animation: slideup 2s backwards; */
 }
-/* @keyframes slideup {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-} */
+
 .Text_msg {
   width: fit-content;
   max-width: 400px;
@@ -844,7 +803,7 @@
     display: block;
   }
   .Selected_Conversation {
-    margin-top:15vh;
+    margin-top: 15vh;
     height: 85vh;
   }
   .loader_container {

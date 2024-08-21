@@ -5,7 +5,7 @@ import { SelectGroupConversation } from "../../store/slices/appSlice";
 import { socket } from "../../socket";
 import formatTime2 from "../../utils/formatTime2";
 import formatTime from "../../utils/formatTime";
-
+import { GrGroup } from "react-icons/gr";
 const Groupchat = ({ chat }) => {
   const { friends } = useSelector((state) => state.app);
   let user;
@@ -64,7 +64,7 @@ const Groupchat = ({ chat }) => {
       onClick={handleSelectConversation}
     >
       <div className="image_container">
-        <img src={img} alt="" />
+        {img ? <img src={img} alt="" /> : <GrGroup className="no_img" />}
         {online && <span className="online_offline"></span>}
       </div>
       <div className="info">

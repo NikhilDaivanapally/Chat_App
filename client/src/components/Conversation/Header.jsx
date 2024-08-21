@@ -4,19 +4,22 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoCallOutline, IoVideocamOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { socket } from "../../socket";
-import { SelectDirectConversation, toggleSideBar } from "../../store/slices/appSlice";
+import {
+  SelectDirectConversation,
+  toggleSideBar,
+} from "../../store/slices/appSlice";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import {
   setCurrentDirectConversation,
   setCurrentGroupConversation,
 } from "../../store/slices/conversation";
+import { GrGroup } from "react-icons/gr";
 
 const Header = () => {
   const dispatch = useDispatch();
   const [istyping, setIstyping] = useState("");
 
   const { room_id, chat_type } = useSelector((state) => state.app);
-
   const {
     DirectConversations,
     current_direct_conversation,
@@ -52,7 +55,7 @@ const Header = () => {
     dispatch(toggleSideBar());
   };
   const handleGobackToConversation = () => {
-    dispatch(SelectDirectConversation({room_id:null}))
+    dispatch(SelectDirectConversation({ room_id: null }));
     if (chat_type == "individual") {
       dispatch(setCurrentDirectConversation(null));
     } else {
@@ -68,15 +71,19 @@ const Header = () => {
       />
       <div className="Profile" onClick={handleToggleContactsideBar}>
         <div className="profile_container">
-          <img
-            className="profile"
-            src={
-              chat_type === "individual"
-                ? current_direct_conversation?.avatar
-                : current_group_conversation?.img
-            }
-            alt=""
-          />
+          {chat_type === "individual" && (
+            <img
+              className="profile"
+              src={current_direct_conversation?.avatar}
+            />
+          )}
+          {chat_type === "group" &&
+            (current_group_conversation?.img ? (
+              <img className="profile" src={current_group_conversation?.img} />
+            ) : (
+              <GrGroup className="no_groupimg" />
+            ))}
+
           {current_direct_conversation?.online && (
             <span className="online_offline"></span>
           )}
@@ -112,23 +119,6 @@ const Header = () => {
           </p>
         </div>
       </div>
-      {/* right side */}
-      {/* <div className="media_controls">
-        <ul>
-          <li>
-            <IoVideocamOutline />
-          </li>
-          <li>
-            <IoCallOutline />
-          </li>
-          <li>
-            <CiSearch />
-          </li>
-          <li>
-            <IoIosArrowDown />
-          </li>
-        </ul>
-      </div> */}
     </div>
   );
 };

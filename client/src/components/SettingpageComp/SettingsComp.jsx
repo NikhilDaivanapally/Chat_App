@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import { CiSearch } from "react-icons/ci";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import "./SettingComp.css";
 import { useNavigate } from "react-router-dom";
 const SettingsComp = () => {
-  const Navigate = useNavigate()
+  const Navigate = useNavigate();
   const inputRef = useRef(null);
 
   const settingList = ["Change Theme"];
@@ -18,12 +17,10 @@ const SettingsComp = () => {
     localStorage.setItem("data-theme", theme);
   };
   const handleSelect = (e) => {
-    // console.log(e.target.classList.contains("Change_Theme"));
     switch (e.target.tagName) {
       case "INPUT":
         switch (true) {
           case e.target.classList.contains("Change_Theme"):
-            console.log("theme change");
             handleChangeTheme();
             break;
 
@@ -52,13 +49,13 @@ const SettingsComp = () => {
     }
   }, []);
   const handleBack = () => {
-    Navigate(-1)
-  }
+    Navigate(-1);
+  };
   return (
     <div className="Settings_Sections">
       <div className="Top_Section">
         <div className="Top_bar">
-          <MdKeyboardArrowLeft onClick={handleBack}/>
+          <MdKeyboardArrowLeft onClick={handleBack} />
           <p className="left title">Settings</p>
         </div>
       </div>
@@ -74,7 +71,7 @@ const SettingsComp = () => {
                   ref={inputRef}
                   className={"Change_Theme"}
                 />
-                <span class="slider"></span>
+                <span className="slider"></span>
               </label>
             </div>
           );
